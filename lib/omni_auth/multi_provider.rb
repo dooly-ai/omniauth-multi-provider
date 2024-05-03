@@ -18,7 +18,7 @@ module OmniAuth
 
       static_options = options.merge(path_prefix: path_prefix)
 
-      builder.provider(provider_name, static_options.merge(handler.provider_options))
+      builder.provider(provider_name, client_options: static_options.merge(handler.provider_options))
     end
   end
 end
